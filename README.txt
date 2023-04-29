@@ -80,7 +80,6 @@ Comme les variable sont aléatoires, si vous voulez simplifiez cette fraction un
 ```
 $A = \frac{{v1}}{{v2}}{v3}$
 ```
-
 Et dans le code python vous aurez alors:
 ```
 #Définition de v[1] et v[2] déjà faites
@@ -95,17 +94,20 @@ if r==1:
 		v[3]='=\\frac{'+str(num)+'}{'+str(den)+'}' #Ce qui écrit $A = \frac{a}{b}=\frac{num}{den}$ dans le fichier .tex
 ```
 
+Il est possible aussi d'individualiser les graphiques 
+
 ## Personnalisation
-Pour modifier le script afin de générer différents problèmes ou d'utiliser différents algorithmes de résolution de problèmes, vous pouvez modifier le code dans la fonction `main()` où se trouve le commentaire `# Personnalisation des valeurs spécifiques pour le devoir et le corrigé selon les besoins.`. C'est ici que le script génère des valeurs aléatoires pour les variables utilisées dans les templates LaTeX. Ajustez le code dans cette section en fonction de vos besoins.
+Si vos listes d'élèves sont sous un autre format, vous pouvez ajuster la fonction `read_students`
 
 ## Dépannage
 Si vous rencontrez des problèmes lors de l'utilisation du script, vérifiez les points suivants :
 
 1. Assurez-vous que les logiciels requis et les packages Python sont installés.
 2. Vérifiez que le fichier CSV et les templates LaTeX sont correctement formatés et placés dans le même dossier que le script.
-3. Vérifiez le terminal (ou l'invite de commandes) pour les messages d'erreur ou les avertissements qui peuvent fournir plus d'informations sur le problème.
-
-Patchnote:
-1.1 - Modification des fonctions de Fusion pour itérer sur Student et s'assurer que le pdf merge reste dans le même ordre que la liste des élèves.
-Quelques modifications du header et de style.
-1.2 - Plus besoin de retirer le header ou de doubler les accolades. Le template peut être un fichier .tex fonctionnel et normal.
+3. Vérifiez le terminal pour les messages d'erreur ou les avertissements qui peuvent fournir plus d'informations sur le problème.
+4. Commentez les lignes:
+	```
+		for ext in [".aux", ".log", ".tex"]:
+			os.remove(output_path + ext)
+	```
+	Dans la fonction generate_pdf pour garder les fichiers de génération des pdf.
