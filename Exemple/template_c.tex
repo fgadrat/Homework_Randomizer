@@ -1,0 +1,133 @@
+\documentclass{article}%
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage{lmodern}%
+\usepackage{textcomp}%
+\usepackage{lastpage}%
+\usepackage{geometry}%
+\geometry{head=40pt,margin=0.5in,bottom=1.0in,includeheadfoot=False}%
+%
+\usepackage{fancyhdr}%
+\usepackage[french]{babel}%
+\usepackage{amsmath}%
+\usepackage{amssymb}%
+\usepackage{graphicx}%
+\usepackage{tikz}%
+\usetikzlibrary{calc,positioning}%
+\pagestyle{fancy}%
+\fancyhf{}%
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}%
+\date{}%
+\author{}%
+%
+\begin{document}%
+\normalsize%
+\begin{center}
+    {\Large\textbf{Corrigé du devoir de {student_name}}}\\
+    Géométrie et calculs algébriques
+\end{center}
+
+\subsection*{Exercice I}
+\begin{enumerate}
+\item Figure:
+
+\begin{center}
+\begin{tikzpicture}[scale=0.5]
+\draw[gray!50, thin, step=1] (-8,-8) grid (8,8);
+\draw[->,thick] (-8,0)--(8,0) node[right]{$x$};
+\draw[->,thick] (0,-8)--(0,8) node[above]{$y$};
+
+\foreach \x in {-7,...,7} {
+    \draw (\x,2pt)--(\x,-2pt) node[below] {\tiny $\x$};
+}
+
+\foreach \y in {-7,...,7} {
+    \draw (2pt,\y)--(-2pt,\y) node[left] {\tiny $\y$};
+}
+
+\node[label={left:$A$},circle,fill,inner sep=1.5pt] (A) at ({v1},{v2}) {};
+\node[label={left:$B$},circle,fill,inner sep=1.5pt] (B) at ({v3},{v4}) {};
+\node[label={left:$C$},circle,fill,inner sep=1.5pt] (C) at ({v5},{v6}) {};
+\node[label={left:$D$},circle,fill,inner sep=1.5pt] (D) at ({v7},{v8}) {};
+
+\coordinate (M) at ($(B)!0.5!(C)$);
+\node[label={left:$M$},circle,fill,inner sep=1.5pt] (M) at (M) {};
+
+\draw (A)--(B)--(C)--(A)--cycle;
+\draw (A)--(M);
+\draw (C)--(D);
+\draw (D)--(B);
+
+\end{tikzpicture}
+\end{center}
+
+\item Les coordonnées de $M$ sont : $ M\begin{pmatrix} \frac{x_B+x_C}{2} \\ \frac{y_B+y_C}{2}\end{pmatrix}
+=\begin{pmatrix} \frac{{v3}+{v5}}{2}\\ \frac{{v4}+{v6}}{2} \end{pmatrix}
+= \begin{pmatrix} {v9} \\ {v10} \end{pmatrix}
+
+\item 
+$\begin{aligned}[t]
+MA &= \sqrt{(x_A-x_M)^2+(y_A-y_M)^2}\\
+&=\sqrt{({v1}-({v9}))^2+({v2}-({v10}))^2}\\
+&=\sqrt{({v21})^2+({v22})^2}\\
+&=\sqrt{{v23}+{v24}}\\
+&=\sqrt{v50}\\
+&=5 \sqrt{2}\\
+MB &= \sqrt{({v3}-({v9}))^2+({v4}-({v10}))^2}\\
+&=\sqrt{({v25})^2+({v26})^2}\\
+&=\sqrt{{v27}+{v28}}\\
+&=5 \sqrt{2}\\
+MC &= \sqrt{({v5}-({v9}))^2+({v6}-({v10}))^2}\\
+&=\sqrt{({v29})^2+({v30})^2}\\
+&=\sqrt{{v31}+{v32}}\\
+&=5 \sqrt{2}\\
+\end{aligned}$
+
+\item Comme $MA = MB = MC$, M est donc le centre du cercle circonscrit à ABC. On peut en déduire que le triangle $ABC$ est rectangle en $A$.
+
+\item Par lecture graphique, on trouve que $D\begin{pmatrix} {v7} \\ {v8} \end{pmatrix}$.\\
+En calculant : $D=B+\overrightarrow{AC}=\begin{pmatrix} {v3} \\ {v4} \end{pmatrix}+\begin{pmatrix} {v33} \\ {v34} \end{pmatrix}=\begin{pmatrix} {v7} \\ {v8} \end{pmatrix}$
+
+\end{enumerate}
+\newpage
+\subsection*{Exercice II}
+\begin{enumerate}
+\item $\begin{aligned}[t]
+\frac{{v11}}{{v12}}-\frac{{v13}}{{v14}} &= \frac{{v11}\times {v35}}{{v12}\times {v35}} - \frac{{v13}\times {v36}}{{v14}\times {v36}} \\
+&= \frac{{v37}}{{v38}} - \frac{{v39}}{{v38}} \\
+&= \frac{{v37}-{v39}}{{v38}} \\
+&= \frac{{v40}}{{v38}}{v41}
+\end{aligned}$
+
+\item
+\begin{enumerate}
+\item $\begin{aligned}[t]
+(x+{v15})^2 &= x^2 + 2\times {v15}x + {v15}^2\\
+&= x^2 + {v42}x + {v43}
+\end{aligned}$
+
+
+\item $\begin{aligned}[t]
+(2x-1)({v16}-x) &= 2x\times {v16} - 2x\times x - {v16} + x\\
+&= {v44}x - 2x^2 - {v16} + x\\
+&=-2x^2 + {v45}x -{v16}
+\end{aligned}$
+\end{enumerate}
+
+\item
+\begin{enumerate}
+\item $\begin{aligned}[t]
+{v17}x^2+{v18}x+{v19} &= ({v46}x)^2+2({v46}x)({v47})+({v47})^2\\
+&= ({v46}x+{v47})^2
+\end{aligned}$
+
+\item $\begin{aligned}[t]
+x^2+x(x+{v20}) &= x\times x+x(x+{v20})\\
+&= x(x+(x+{v20}))\\
+&= x(2x+{v20})
+\end{aligned}$
+
+\end{enumerate}
+\end{enumerate}
+\end{document}
