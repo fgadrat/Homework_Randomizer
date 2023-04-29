@@ -21,6 +21,10 @@ Vous pouvez installer les packages Python requis à l'aide de pip :
 pip install pandas pypdf
 ```
 
+## Exemple
+Dans le dossier `Exemple` vous trouverez deux fichiers pdf, un [devoir](https://github.com/fgadrat/Homework_Randomizer/blob/main/Exemple/Devoir_Exemple.pdf) et un [corrigé](https://github.com/fgadrat/Homework_Randomizer/blob/main/Exemple/Devoir_Exemple_Corriges.pdf) générés par ce script pour une classe fictive.
+Dans ce dossier, j'ai placé le script `Exemple.py` adapté pour générer les valeurs numériques de ce devoir, les deux templates et la liste des élèves de la classe. Vous pouvez télécharger ce dossier `Exemple`, lancer le script et re-générer mon devoir exemple.
+
 ## Fichiers en entrée
 1. `eleves.csv`: Un fichier CSV contenant la liste des élèves de la classe. Les noms des élèves doivent être au format "NOM Prénom" et situés dans la première colonne, à partir de la troisième ligne. Format sous lequel nous le fourni pronote (vous risquez d'avoir un devoir au nom de "Moyenne").
 2. `template.tex`: Un template LaTeX pour le devoir. Les variables remplaçables doivent être formatées comme `{v1}`, `{v2}`, etc. Ainsi qu'une variable `{student_name}`
