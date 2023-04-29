@@ -1,6 +1,6 @@
 # Homework Assignment Randomizer
 
-[**Français**](https://github.com/fgadrat/Homework_Randomizer/README.md) |
+[**Français**](https://github.com/fgadrat/Homework_Randomizer) |
 English
 
 ## Overview
