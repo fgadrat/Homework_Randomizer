@@ -1,4 +1,4 @@
-Générateur de devoirs avec valeurs aléatoires.
+###Générateur de devoirs de maths avec valeurs aléatoires.
 
 ## Vue d'ensemble
 Ce script est conçu pour créer des devoirs personnalisés et leurs corrigés. Il lit une liste de noms d'élèves à partir d'un fichier CSV, génère des valeurs aléatoires pour chaque élève à remplacer dans les template LaTeX spécifiés. Puis il génère les devoirs et les corrigés sous forme de PDF. Le script fusionne également tous les PDF individuels en deux PDF uniques pour imprimer facilement, l'un contenant tous les devoirs et l'autre contenant tous les corrigés.
