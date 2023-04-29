@@ -113,8 +113,8 @@ Si vous rencontrez des problèmes lors de l'utilisation du script, vérifiez les
 2. Vérifiez que le fichier CSV et les templates LaTeX sont correctement formatés et placés dans le même dossier que le script.
 3. Vérifiez le terminal pour les messages d'erreur ou les avertissements qui peuvent fournir plus d'informations sur le problème.
 4. Commentez les lignes:
-	```
-		for ext in [".aux", ".log", ".tex"]:
-			os.remove(output_path + ext)
-	```
-	Dans la fonction generate_pdf pour garder les fichiers de génération des pdf.
+```
+	for ext in [".aux", ".log", ".tex"]:
+		os.remove(output_path + ext)
+```
+Dans la fonction generate_pdf pour garder les fichiers de génération des pdf.
