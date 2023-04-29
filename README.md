@@ -1,7 +1,7 @@
 Générateur de devoirs avec valeurs aléatoires.
 
 ## Vue d'ensemble
-Ce script est conçu pour créer des devoirs personnalisés et leurs corrigés. Il lit une liste de noms d'élèves à partir d'un fichier CSV, génère des problèmes aléatoires pour chaque élève en fonction des template LaTeX spécifiés, puis génère les devoirs et les corrigés sous forme de PDF. Le script fusionne également tous les PDF individuels en deux PDF uniques, l'un contenant tous les devoirs et l'autre contenant tous les corrigés.
+Ce script est conçu pour créer des devoirs personnalisés et leurs corrigés. Il lit une liste de noms d'élèves à partir d'un fichier CSV, génère des valeurs aléatoires pour chaque élève à remplacer dans les template LaTeX spécifiés. Puis il génère les devoirs et les corrigés sous forme de PDF. Le script fusionne également tous les PDF individuels en deux PDF uniques pour imprimer facilement, l'un contenant tous les devoirs et l'autre contenant tous les corrigés.
 
 ## Prérequis
 Avant d'utiliser ce script, assurez-vous d'avoir les logiciels suivants installés sur votre ordinateur :
@@ -25,7 +25,7 @@ pip install pandas pypdf
 
 ## Utilisation
 1. Placez le script, le fichier CSV et les template LaTeX dans le même dossier.
-2. Exécutez le script avec la commande suivante :
+2. Exécutez le script.
 3. Entrez le nom du devoir lorsque vous y êtes invité. Ce nom sera utilisé comme préfixe pour les PDF générés et les sous-répertoires.
 4. Le script générera des devoirs personnalisés et des corrigés pour chaque élève et les sauvegardera en tant que PDF dans des sous-répertoires distincts nommés d'après le devoir (par exemple, "Devoir_1" et "Devoir_1_Corrige").
 5. Le script fusionnera également tous les PDF individuels en deux PDF uniques, l'un contenant tous les devoirs (par exemple, "Devoir_1.pdf") et l'autre contenant toutes les corrigés (par exemple, "Devoir_1_Corriges.pdf").
@@ -89,9 +89,9 @@ if r==1:
 	num=v[1]//r
 	den=v[2]//r
 	if den==1:
-		v[3]='='+str(num) #Comme le dénominateur fait 1, on écrit $A = \frac{a}{b}=num$ dans le fichier .tex
+		v[3]=f'={num}'  #Comme le dénominateur fait 1, on écrit $A = \frac{a}{b}=num$ dans le fichier .tex
 	else:
-		v[3]='=\\frac{'+str(num)+'}{'+str(den)+'}' #Ce qui écrit $A = \frac{a}{b}=\frac{num}{den}$ dans le fichier .tex
+		v[3]=f'=\\frac{{num}}{{den)}} #Ce qui écrit $A = \frac{a}{b}=\frac{num}{den}$ dans le fichier .tex
 ```
 
 Il est possible aussi d'individualiser les graphiques 
