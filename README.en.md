@@ -1,4 +1,4 @@
-Homework Assignment Randomizer
+# Homework Assignment Randomizer
 
 ## Overview
 This script is designed to create personalized homework assignments and their solutions for students. It reads a list of student names from a CSV file, generates random values for each student to replace elements on the specified LaTeX templates, and then outputs the homework assignments and solutions as PDFs. The script also merges all the individual PDFs into two single PDFs, one containing all the assignments and the other containing all the solutions.
