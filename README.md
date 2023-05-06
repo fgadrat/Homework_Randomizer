@@ -9,7 +9,7 @@ Ce script est conçu pour créer des devoirs personnalisés et leurs corrigés. 
 ## Prérequis
 Avant d'utiliser ce script, assurez-vous d'avoir les logiciels suivants installés sur votre ordinateur :
 
-1. Python 3
+1. Python
 2. Distribution LaTeX (par exemple, TeX Live, MikTeX)
 3. Packages Python :
    - pandas
