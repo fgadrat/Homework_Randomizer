@@ -9,7 +9,7 @@ This script is designed to create personalized homework assignments and their so
 ## Prerequisites
 Before using this script, ensure that you have the following software installed on your computer:
 
-1. Python 3
+1. Python
 2. LaTeX distribution (e.g., TeX Live, MikTeX)
 3. Python packages:
    - pandas
